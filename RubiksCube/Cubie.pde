@@ -15,7 +15,7 @@ class Cubie
   /**
    * CONSTRUCTOR
    *
-   * Initialize the Cubie by setting its transformation and creating its Faces
+   * Initialize the Cubie by setting its position and creating its Faces
    *
    * @param x The x-Position of the Cubie
    * @param y The y-Position of the Cubie

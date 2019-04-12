@@ -43,15 +43,10 @@ void renderAxis()
 {
   strokeWeight(4);
   
-  // X-Axis
-  stroke(EnumColor.ColorBlue.getRGB());
-  line(0, 0, 0, 500, 0, 0);
-  
-  // Y-Axis
-  stroke(EnumColor.ColorYellow.getRGB());
-  line(0, 0, 0, 0, 500, 0);
-  
-  // Z-Axis
-  stroke(EnumColor.ColorRed.getRGB());
-  line(0, 0, 0, 0, 0, 500);
+  for (EnumAxis axis : EnumAxis.values())
+  {
+    stroke(axis.getColor());
+    
+    line(0, 0, 0, axis.getX() * 500, axis.getY() * 500, axis.getZ() * 500);
+  }
 }

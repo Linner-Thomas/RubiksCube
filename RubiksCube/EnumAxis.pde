@@ -34,4 +34,21 @@ enum EnumAxis
   {
     return this == AxisZ ? 1 : 0;
   }
+  
+  /**
+   * Get Axis color for rendering
+   *
+   * @return color in HexString
+   */
+  public int getColor()
+  {
+    switch(this)
+    {
+      case AxisX: return #FF0000;
+      case AxisY: return #00FF00;
+      case AxisZ: return #0000FF;
+      
+      default: return #000000;
+    }
+  }
 }
