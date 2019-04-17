@@ -27,6 +27,8 @@ class Face
   
   /**
    * Render the Face with correct translation, rotation and color
+   *
+   * @param rotation The rotation of the Cubie
    */
   public void render()
   {
@@ -35,13 +37,13 @@ class Face
       rectMode(CENTER);
       
       stroke(#000000);
-      strokeWeight(1);
+      strokeWeight(2);
       
       // Get Color for Face
       fill(ecolor.getRGB());
       
       // Translate Face into correct position
-      translate(Cubie.SIZE / 2 * (axis.getX() * level - 1), Cubie.SIZE / 2 * (axis.getY() * level - 1), Cubie.SIZE / 2 * (axis.getZ() * level - 1));
+      translate(Cubie.SIZE / 2 * (axis.getX() * level), Cubie.SIZE / 2 * (axis.getY() * level), Cubie.SIZE / 2 * (axis.getZ() * level));
       
       // Rotate Face according to its Axis
       rotate(HALF_PI, axis.getY(), axis.getX(), axis.getZ());
